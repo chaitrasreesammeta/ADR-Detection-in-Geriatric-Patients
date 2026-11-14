@@ -1,0 +1,43 @@
+Loaded 40 test cases from adr_test_dataset
+Running experiment:   0%|          | 0/40 [00:00<?, ?it/s]Running experiment:   2%|▎         | 1/40 [00:43<28:31, 43.90s/it]Running experiment:   5%|▌         | 2/40 [00:57<16:21, 25.83s/it]Running experiment:   8%|▊         | 3/40 [01:22<15:57, 25.87s/it]Running experiment:  10%|█         | 4/40 [01:24<09:40, 16.12s/it]Running experiment:  12%|█▎        | 5/40 [01:53<12:12, 20.94s/it]Running experiment:  15%|█▌        | 6/40 [02:28<14:37, 25.82s/it]Running experiment:  18%|█▊        | 7/40 [02:40<11:36, 21.09s/it]Running experiment:  20%|██        | 8/40 [02:45<08:32, 16.01s/it]Running experiment:  22%|██▎       | 9/40 [03:02<08:29, 16.45s/it]Running experiment:  25%|██▌       | 10/40 [03:54<13:35, 27.19s/it]Running experiment:  28%|██▊       | 11/40 [04:10<11:31, 23.86s/it]Running experiment:  30%|███       | 12/40 [04:25<09:51, 21.14s/it]Running experiment:  32%|███▎      | 13/40 [04:38<08:28, 18.85s/it]Running experiment:  35%|███▌      | 14/40 [04:53<07:33, 17.43s/it]Running experiment:  38%|███▊      | 15/40 [05:20<08:30, 20.43s/it]Running experiment:  40%|████      | 16/40 [05:47<08:56, 22.36s/it]Running experiment:  42%|████▎     | 17/40 [06:00<07:31, 19.61s/it]Running experiment:  45%|████▌     | 18/40 [06:20<07:13, 19.69s/it]Running experiment:  48%|████▊     | 19/40 [06:26<05:30, 15.73s/it]Running experiment:  50%|█████     | 20/40 [07:02<07:11, 21.56s/it]Running experiment:  52%|█████▎    | 21/40 [07:12<05:44, 18.12s/it]Running experiment:  55%|█████▌    | 22/40 [07:41<06:27, 21.50s/it]Running experiment:  57%|█████▊    | 23/40 [07:47<04:45, 16.77s/it]Running experiment:  60%|██████    | 24/40 [08:36<07:02, 26.41s/it]Running experiment:  62%|██████▎   | 25/40 [08:36<04:37, 18.53s/it]Running experiment:  65%|██████▌   | 26/40 [09:14<05:41, 24.39s/it]Running experiment:  68%|██████▊   | 27/40 [09:38<05:15, 24.29s/it]Running experiment:  70%|███████   | 28/40 [10:03<04:54, 24.51s/it]Running experiment:  72%|███████▎  | 29/40 [10:46<05:30, 30.07s/it]Running experiment:  75%|███████▌  | 30/40 [10:51<03:45, 22.60s/it]Running experiment:  78%|███████▊  | 31/40 [10:56<02:36, 17.37s/it]Running experiment:  80%|████████  | 32/40 [11:12<02:15, 16.96s/it]Running experiment:  82%|████████▎ | 33/40 [11:54<02:51, 24.44s/it]Running experiment:  85%|████████▌ | 34/40 [12:21<02:31, 25.23s/it]Running experiment:  88%|████████▊ | 35/40 [12:21<01:28, 17.73s/it]Running experiment:  90%|█████████ | 36/40 [12:52<01:26, 21.66s/it]Running experiment:  92%|█████████▎| 37/40 [13:01<00:53, 17.81s/it]Running experiment:  95%|█████████▌| 38/40 [13:28<00:41, 20.62s/it]Running experiment:  98%|█████████▊| 39/40 [13:55<00:22, 22.35s/it]Running experiment: 100%|██████████| 40/40 [14:00<00:00, 17.17s/it]Running experiment: 100%|██████████| 40/40 [14:00<00:00, 21.01s/it]
+Running TP09 (patient 1376)
+Running TP01 (patient 1277)
+Running TP37 (patient 1614)
+Running TP28 (patient 1534)
+Running TP19 (patient 1479)
+Running TP10 (patient 1386)
+Running TP38 (patient 1623)
+Running TP29 (patient 1541)
+Running TP20 (patient 1487)
+Running TP11 (patient 1397)
+Running TP02 (patient 1289)
+Running TP39 (patient 1631)
+Running TP30 (patient 1548)
+Running TP21 (patient 1495)
+Running TP12 (patient 1409)
+Running TP03 (patient 1304)
+Running TP40 (patient 1639)
+Running TP31 (patient 1555)
+Running TP22 (patient 1500)
+Running TP13 (patient 1420)
+Running TP04 (patient 1315)
+Running TP32 (patient 1561)
+Running TP23 (patient 1506)
+Running TP14 (patient 1427)
+Running TP05 (patient 1327)
+Running TP33 (patient 1571)
+Running TP24 (patient 1511)
+Running TP15 (patient 1439)
+Running TP06 (patient 1340)
+Running TP34 (patient 1582)
+Running TP25 (patient 1517)
+Running TP16 (patient 1453)
+Running TP07 (patient 1352)
+Running TP35 (patient 1590)
+Running TP26 (patient 1522)
+Running TP17 (patient 1462)
+Running TP08 (patient 1365)
+Running TP36 (patient 1602)
+Running TP27 (patient 1528)
+Running TP18 (patient 1470)
+Results saved to /Users/chaitranaidu/langchain_demo/adr/evals/experiments/ragas-gpt-4o-2026-11-14-0-58.csv

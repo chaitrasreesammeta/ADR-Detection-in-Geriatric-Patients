@@ -1,0 +1,699 @@
+test_id,patient_id,user_input,reference,response,retrieved_sections,faithfulness,context_precision,context_recall,response_relevancy,error
+TP08,1189,Check patient 1189 for ADR risks,"NO DOSE FLAG: Apixaban 2.5 mg is correct (meets all 3 reduction criteria) - chatbot should NOT recommend a change
+MILD: Monitor bleeding and kidney function yearly","**Interactions**  
+- No interactions identified between Apixaban and Furosemide.  
+- No interactions identified between Apixaban and Metoprolol.  
+- No interactions identified between Apixaban and Levothyroxine.  
+
+**Adverse Drug Reactions**  
+- **Apixaban**:  
+  - Bleeding risk (especially major bleeding).  
+  - Increased risk of GI bleeding.  
+  - Risk of intracranial bleeding.  
+
+**Dose checks**  
+- Apixaban 2.5 mg twice daily is appropriate for this patient based on age, weight, and serum creatinine.  
+
+Overall severity: Moderate - the bleeding risk associated with Apixaban requires careful monitoring, especially in older adults.","Apixaban / Adverse Drug Reaction Profile
+Apixaban / Interactions
+Apixaban / Monitoring
+Apixaban / Urgent Signs
+Apixaban / Dosing Considerations
+Apixaban / Alternatives
+Apixaban / Mechanism",1.0,0.9484126983968916,1.0,0.5108133003679339,
+TP02,1113,Check patient 1113 for ADR risks,"SEVERE: Major bleeding risk - warfarin + aspirin + ibuprofen + sertraline
+MODERATE: Ibuprofen blunts aspirin's antiplatelet effect when taken together
+MODERATE: Sertraline raises INR on warfarin - monitor INR
+Recommend acetaminophen for back pain instead of ibuprofen","**Interactions**  
+- Warfarin and Ibuprofen: Increased bleeding risk due to additive effects on gastrointestinal bleeding.  
+- Warfarin and Aspirin: Increased bleeding risk due to additive effects on anticoagulation.  
+- Warfarin and Sertraline: Increased bleeding risk; sertraline raised prothrombin time by 8% in patients on warfarin.  
+
+**Adverse Drug Reactions**  
+- **Warfarin**:  
+  - Bleeding (risk is high due to age and concurrent medications).  
+  - Skin and tissue necrosis (rare but serious).  
+  - Purple toes syndrome (rare).  
+
+- **Aspirin**:  
+  - Increased bleeding risk (especially gastrointestinal).  
+  - Gastric ulceration (risk increased with age and concurrent NSAID use).  
+  - Renal impairment (risk increased with concurrent NSAID use).  
+
+- **Ibuprofen**:  
+  - Gastrointestinal ulceration (risk increased with concurrent anticoagulants).  
+  - Kidney impairment (risk increased with chronic use).  
+  - High blood pressure (risk increased with chronic use).  
+
+- **Sertraline**:  
+  - Increased bleeding risk (especially with anticoagulants).  
+  - Hyponatremia/SIADH (risk in older adults).  
+  - QT prolongation (risk in overdose situations).  
+
+**Dose checks**  
+- Warfarin 5 mg: within typical maintenance range (2-10 mg daily).  
+- Aspirin 81 mg: appropriate for cardioprotection.  
+- Ibuprofen 400 mg three times daily: potential concern for long-term use in older adults; monitoring recommended.  
+- Sertraline 100 mg: above the common starting dose for older adults (25 mg recommended).  
+
+**Overall severity**: Moderate - the combination of warfarin with aspirin and ibuprofen significantly increases bleeding risk, necessitating careful monitoring and consideration of alternatives.","Warfarin / Adverse Drug Reaction Profile
+Warfarin / Interactions
+Warfarin / Monitoring
+Warfarin / Dosing Considerations
+Warfarin / Urgent Signs
+Warfarin / Alternatives
+Warfarin / Mechanism
+Aspirin / Adverse Drug Reaction Profile
+Aspirin / Monitoring
+Aspirin / Interactions
+Aspirin / Dosing Considerations
+Aspirin / Interactions
+Aspirin / Urgent Signs
+Aspirin / Alternatives
+Ibuprofen / Interactions
+Ibuprofen / Monitoring
+Ibuprofen / Adverse Drug Reaction Profile
+Ibuprofen / Dosing Considerations
+Ibuprofen / Interactions
+Ibuprofen / Urgent Signs
+Ibuprofen / Alternatives
+Sertraline / Adverse Drug Reaction Profile
+Sertraline / Monitoring
+Sertraline / Interactions
+Sertraline / Dosing Considerations
+Sertraline / Urgent Signs
+Sertraline / Alternatives
+Sertraline / Mechanism",0.9655172413793104,0.800081855393737,1.0,0.44406864366522275,
+TP15,1263,Check patient 1263 for ADR risks,"MODERATE: Gabapentin 1800 mg/day with CrCl about 48 - label range is 400-1400 mg/day
+MODERATE: Glyburide with CKD stage 3 - hypoglycemia; consider glipizide
+MILD: Gabapentin dizziness and edema; long-term omeprazole review","**Interactions**  
+- Gabapentin and Omeprazole: No meaningful interactions noted.
+
+**Dose checks**  
+- Gabapentin 600 mg three times daily exceeds the maximum recommended dose for CrCl 30-59 mL/min (400-1400 mg/day).  
+  Severity: Severe - the dose should generally be avoided in older adults due to the risk likely outweighing the benefit.  
+- Glyburide 5 mg twice daily is within the usual maintenance range but should be monitored closely due to the patient's age and renal function.  
+  Severity: Moderate - needs monitoring due to the risk of hypoglycemia in older adults.  
+- Omeprazole 40 mg daily is above the typical dose for GERD (20 mg daily) and may increase long-term risks.  
+  Severity: Moderate - should be monitored for potential long-term effects.
+
+**Adverse Drug Reactions**  
+- **Gabapentin**  
+  - Dizziness  
+  - Somnolence  
+  - Ataxia  
+
+- **Glyburide**  
+  - Hypoglycemia  
+  - Weight gain  
+  - Allergic skin reactions  
+
+- **Omeprazole**  
+  - Headache  
+  - Abdominal pain  
+  - C. difficile-associated diarrhea  
+
+Overall severity: Severe - the combination of high-dose gabapentin and the patient's age and renal function significantly increases the risk of adverse drug reactions.","Gabapentin / Adverse Drug Reaction Profile
+Gabapentin / Monitoring
+Gabapentin / Urgent Signs
+Gabapentin / Interactions
+Gabapentin / Dosing Considerations
+Gabapentin / Alternatives
+Gabapentin / Mechanism
+Glyburide / Adverse Drug Reaction Profile
+Glyburide / Monitoring
+Glyburide / Interactions
+Glyburide / Dosing Considerations
+Glyburide / Alternatives
+Glyburide / Urgent Signs
+Glyburide / Mechanism
+Omeprazole / Adverse Drug Reaction Profile
+Omeprazole / Monitoring
+Omeprazole / Interactions
+Omeprazole / Alternatives
+Omeprazole / Urgent Signs
+Omeprazole / Dosing Considerations
+Omeprazole / Mechanism",0.7727272727272727,0.8864024863936224,1.0,0.4348314855341222,
+TP13,1244,Check patient 1244 for ADR risks,"AGE CONTROL: Patient is 58 - geriatric criteria do not apply; chatbot should say so
+May still note additive sedation from diazepam + zolpidem","Geriatric criteria do not apply since the patient is under 65. Therefore, I will mention general interaction risks.
+
+**Interactions:**
+- Diazepam and Zolpidem: Both are CNS depressants, which can lead to increased sedation and risk of falls.
+
+**Diazepam:**
+- Anterograde amnesia
+- Confusion
+- Sedation
+
+**Zolpidem:**
+- Drowsiness
+- Dizziness
+- Complex sleep behaviors
+
+**Dose checks:**
+- Diazepam 5 mg: not above the maximum dose for this patient.
+- Zolpidem 10 mg: exceeds the recommended dose of 5 mg for elderly patients.
+
+**Overall severity:** Moderate - the combination of diazepam and zolpidem increases sedation risk, and zolpidem is above the recommended dose for older adults.","Diazepam / Monitoring
+Diazepam / Adverse Drug Reaction Profile
+Diazepam / Alternatives
+Diazepam / Dosing Considerations
+Diazepam / Urgent Signs
+Diazepam / Interactions
+Diazepam / Interactions
+Zolpidem / Adverse Drug Reaction Profile
+Zolpidem / Monitoring
+Zolpidem / Urgent Signs
+Zolpidem / Dosing Considerations
+Zolpidem / Interactions
+Zolpidem / Alternatives
+Zolpidem / Mechanism",0.9444444444444444,0.5054945054776556,1.0,0.48227400383108215,
+TP06,1164,Check patient 1164 for ADR risks,"SEVERE: CNS depression and fall risk - diazepam + cyclobenzaprine + diphenhydramine
+MODERATE: Omeprazole (CYP2C19) raises diazepam levels - more sedation
+MODERATE: Anticholinergic burden - cyclobenzaprine + diphenhydramine
+MILD: Long-term high-dose omeprazole - fracture, C. difficile, B12, magnesium; consider step-down","**Interactions**  
+- Omeprazole increases levels of diazepam (more sedation).  
+- Cyclobenzaprine and diphenhydramine compound anticholinergic burden.
+
+**Dose checks**  
+- Diazepam 5 mg three times daily: Severity: Moderate - recommended dose for elderly is about half of that given to younger people.  
+- Cyclobenzaprine 10 mg three times daily: Severity: Severe - cyclobenzaprine should generally be avoided in the elderly.  
+- Diphenhydramine 50 mg at bedtime: Severity: Severe - diphenhydramine should generally be avoided in older adults.
+
+**Omeprazole**  
+- Risk of C. difficile-associated diarrhea (long-term use).  
+- Risk of vitamin B12 deficiency (after 3 years).  
+- Risk of hip, wrist, and spine fractures (long-term use).
+
+**Diazepam**  
+- Risk of confusion and sedation.  
+- Increased risk of falls.  
+- Risk of anterograde amnesia.
+
+**Cyclobenzaprine**  
+- Risk of confusion and cognitive impairment.  
+- Risk of drowsiness.  
+- Risk of dysphagia.
+
+**Diphenhydramine**  
+- Risk of confusion and memory loss.  
+- Risk of dry mouth.  
+- Risk of dizziness and sedation.
+
+Overall severity: Severe - multiple medications with significant ADR risks and dose concerns in elderly patients.","Omeprazole / Adverse Drug Reaction Profile
+Omeprazole / Monitoring
+Omeprazole / Alternatives
+Omeprazole / Interactions
+Omeprazole / Urgent Signs
+Omeprazole / Dosing Considerations
+Omeprazole / Mechanism
+Diazepam / Monitoring
+Diazepam / Adverse Drug Reaction Profile
+Diazepam / Alternatives
+Diazepam / Dosing Considerations
+Diazepam / Urgent Signs
+Diazepam / Interactions
+Diazepam / Interactions
+Cyclobenzaprine / Monitoring
+Cyclobenzaprine / Adverse Drug Reaction Profile
+Cyclobenzaprine / Interactions
+Cyclobenzaprine / Dosing Considerations
+Cyclobenzaprine / Urgent Signs
+Cyclobenzaprine / Alternatives
+Cyclobenzaprine / Mechanism
+Diphenhydramine / Monitoring
+Diphenhydramine / Dosing Considerations
+Diphenhydramine / Adverse Drug Reaction Profile
+Diphenhydramine / Alternatives
+Diphenhydramine / Adverse Drug Reaction Profile
+Diphenhydramine / Adverse Drug Reaction Profile
+Diphenhydramine / Urgent Signs
+Diphenhydramine / Interactions",0.9583333333333334,0.8252553717960802,1.0,0.48378616263302465,
+TP04,1139,Check patient 1139 for ADR risks,"SEVERE: Gabapentin 1800 mg/day with CrCl about 21 mL/min - label range is 200-700 mg/day once daily
+MODERATE: Oxybutynin with BPH - urinary retention risk; anticholinergic confusion
+MODERATE: Fall risk - gabapentin sedation and dizziness plus oxybutynin","**Interactions**  
+- Gabapentin and Oxybutynin: Increased risk of CNS depression, sedation, dizziness, and fall risk.
+
+**Dose checks**  
+- Gabapentin 600 mg three times daily: This dose is above the maximum recommended for CrCl 21.3 mL/min. The maximum dose for this patient's kidney function is 700 mg/day (200-700 mg/day, once daily).  
+  Severity: Severe - the risk likely outweighs the benefit in older adults with declining kidney function.  
+- Oxybutynin 5 mg twice daily: This dose is acceptable, but the starting dose for frail elderly patients is lower (2.5 mg two or three times daily).  
+  Severity: Moderate - needs monitoring due to potential anticholinergic effects.
+
+**Adverse Drug Reactions**  
+- Gabapentin:  
+  - Dizziness  
+  - Somnolence  
+  - Ataxia  
+
+- Oxybutynin:  
+  - Confusion  
+  - Somnolence  
+  - Dry mouth  
+
+Overall severity: Severe - the combination of gabapentin and oxybutynin increases the risk of CNS depression, and gabapentin's dose exceeds the recommended limit for this patient's kidney function.","Gabapentin / Adverse Drug Reaction Profile
+Gabapentin / Monitoring
+Gabapentin / Urgent Signs
+Gabapentin / Interactions
+Gabapentin / Dosing Considerations
+Gabapentin / Alternatives
+Gabapentin / Mechanism
+Oxybutynin / Monitoring
+Oxybutynin / Adverse Drug Reaction Profile
+Oxybutynin / Interactions
+Oxybutynin / Dosing Considerations
+Oxybutynin / Urgent Signs
+Oxybutynin / Alternatives
+Oxybutynin / Mechanism",1.0,0.7224164724084455,1.0,0.39849744078525556,
+TP11,1221,Check patient 1221 for ADR risks,"SEVERE: Glyburide in a 90-year-old with CrCl about 20 - hypoglycemia; warfarin also potentiates it
+MODERATE: Omeprazole and tramadol can raise INR on warfarin - monitor INR, bleeding
+MILD: Tramadol 100 mg/day is within the CrCl <30 limit (every 12 hours, max 200 mg/day) - no dose change needed","**Interactions**  
+- Warfarin and Omeprazole: Omeprazole can increase INR in patients on warfarin.  
+- Warfarin and Tramadol: Altered warfarin effect, including raised prothrombin time, has been reported rarely.  
+- Glyburide and Tramadol: Tramadol may contribute to hypoglycemia.
+
+**Dose checks**  
+- Warfarin 3 mg: Severity: not enough information.  
+- Glyburide 5 mg: Severity: not enough information.  
+- Omeprazole 20 mg: Severity: not enough information.  
+- Tramadol 50 mg: This dose is acceptable; however, the maximum dose for patients over 75 is 300 mg/day.  
+
+**Adverse Drug Reactions**  
+- **Warfarin**  
+  - Bleeding risk, especially with age and renal insufficiency.  
+  - Skin and tissue necrosis (rare).  
+  - Fall risk leading to intracranial bleeding.  
+
+- **Glyburide**  
+  - Hypoglycemia, especially in older adults.  
+  - Nausea and epigastric fullness.  
+  - Weight gain.  
+
+- **Omeprazole**  
+  - Risk of hip, wrist, and spine fractures with long-term use.  
+  - C. difficile-associated diarrhea.  
+  - Hypomagnesemia after long-term use.  
+
+- **Tramadol**  
+  - Risk of constipation and dizziness.  
+  - Potential for seizures.  
+  - Risk of hypoglycemia, especially in combination with Glyburide.  
+
+Overall severity: Moderate - the combination of medications and the patient's age and renal function increase the risk of bleeding and hypoglycemia.","Warfarin / Adverse Drug Reaction Profile
+Warfarin / Monitoring
+Warfarin / Interactions
+Warfarin / Dosing Considerations
+Warfarin / Urgent Signs
+Warfarin / Alternatives
+Warfarin / Mechanism
+Glyburide / Adverse Drug Reaction Profile
+Glyburide / Monitoring
+Glyburide / Dosing Considerations
+Glyburide / Interactions
+Glyburide / Urgent Signs
+Glyburide / Alternatives
+Glyburide / Mechanism
+Omeprazole / Adverse Drug Reaction Profile
+Omeprazole / Monitoring
+Omeprazole / Interactions
+Omeprazole / Alternatives
+Omeprazole / Urgent Signs
+Omeprazole / Dosing Considerations
+Omeprazole / Mechanism
+Tramadol / Monitoring
+Tramadol / Adverse Drug Reaction Profile
+Tramadol / Interactions
+Tramadol / Dosing Considerations
+Tramadol / Urgent Signs
+Tramadol / Alternatives
+Tramadol / Mechanism",0.8181818181818182,0.6878465124566059,1.0,0.45290843105892503,
+TP03,1128,Check patient 1128 for ADR risks,"SEVERE: Serotonin syndrome and seizure risk - tramadol + sertraline
+SEVERE: Fall risk - tramadol + zolpidem (two CNS depressants) in an 81-year-old
+MODERATE: Zolpidem 10 mg is above the 5 mg elderly dose
+MODERATE: Hyponatremia risk - sertraline + tramadol + hydrochlorothiazide; check sodium","**Interactions**  
+- Tramadol and Sertraline: Increased risk of serotonin syndrome (agitation, tremor, fever, sweating, diarrhea, muscle rigidity).  
+- Tramadol and Zolpidem: Increased risk of sedation and respiratory depression.  
+- Sertraline and Zolpidem: Sertraline raised zolpidem levels by 43%, increasing sedation risk.
+
+**Dose checks**  
+- Tramadol 50 mg: within the recommended range for older adults.  
+- Sertraline 100 mg: above the recommended starting dose of 25 mg for older adults. Severity: Moderate - requires monitoring due to increased risk of adverse effects in older adults.  
+- Zolpidem 10 mg: above the recommended dose of 5 mg for older adults. Severity: Moderate - requires monitoring due to increased risk of adverse effects in older adults.  
+- Hydrochlorothiazide 25 mg: not in the knowledge base.
+
+**Adverse Drug Reactions**  
+- **Tramadol**:  
+  - Sedation  
+  - Respiratory depression  
+  - Serotonin syndrome  
+
+- **Sertraline**:  
+  - Hyponatremia/SIADH  
+  - Increased bleeding risk  
+  - Serotonin syndrome  
+
+- **Zolpidem**:  
+  - Drowsiness  
+  - Next-day impairment  
+  - Complex sleep behaviors  
+
+Overall severity: Moderate - the combination of medications and doses requires careful monitoring due to increased risks of sedation, serotonin syndrome, and other adverse effects in older adults.","Tramadol / Monitoring
+Tramadol / Adverse Drug Reaction Profile
+Tramadol / Interactions
+Tramadol / Dosing Considerations
+Tramadol / Alternatives
+Tramadol / Urgent Signs
+Tramadol / Mechanism
+Sertraline / Adverse Drug Reaction Profile
+Sertraline / Monitoring
+Sertraline / Interactions
+Sertraline / Dosing Considerations
+Sertraline / Urgent Signs
+Sertraline / Alternatives
+Sertraline / Mechanism
+Zolpidem / Adverse Drug Reaction Profile
+Zolpidem / Monitoring
+Zolpidem / Dosing Considerations
+Zolpidem / Urgent Signs
+Zolpidem / Interactions
+Zolpidem / Alternatives
+Zolpidem / Mechanism",1.0,0.8453913097509989,1.0,0.46205689071765904,
+TP09,1200,Check patient 1200 for ADR risks,"NO DOSE FLAG: Apixaban 5 mg is correct - only 1 criterion (age 80); chatbot should NOT reduce the dose
+MODERATE: Diphenhydramine in elderly - anticholinergic, sedation, falls; switch to loratadine 10 mg daily","**Interactions**  
+- Apixaban and Diphenhydramine: not specifically mentioned in the guideline context, but both can increase the risk of bleeding and sedation, respectively, when combined with other medications.
+
+**Dose checks**  
+- Apixaban 5 mg: Dose is appropriate; no issues noted.  
+- Diphenhydramine 25 mg: Dose is appropriate; no issues noted.  
+- Losartan 50 mg: not in the knowledge base.
+
+**Adverse Drug Reactions**  
+- **Apixaban**  
+  - Bleeding risk (Mild)  
+  - Major bleeding (Moderate)  
+  - Intracranial bleeding (Moderate)  
+
+- **Diphenhydramine**  
+  - Drowsiness (Mild)  
+  - Confusion (Moderate)  
+  - Dry mouth (Mild)  
+
+Overall severity: Moderate - the combination of apixaban and diphenhydramine raises concerns for bleeding and sedation risks in this elderly patient.","Apixaban / Adverse Drug Reaction Profile
+Apixaban / Monitoring
+Apixaban / Interactions
+Apixaban / Dosing Considerations
+Apixaban / Urgent Signs
+Apixaban / Alternatives
+Apixaban / Mechanism
+Diphenhydramine / Monitoring
+Diphenhydramine / Dosing Considerations
+Diphenhydramine / Alternatives
+Diphenhydramine / Adverse Drug Reaction Profile
+Diphenhydramine / Adverse Drug Reaction Profile
+Diphenhydramine / Urgent Signs
+Diphenhydramine / Adverse Drug Reaction Profile
+Diphenhydramine / Interactions",0.6470588235294118,0.7249008567124485,1.0,0.5080630973883353,
+TP07,1176,Check patient 1176 for ADR risks,"SEVERE: Anticholinergic burden in dementia - oxybutynin + amitriptyline; both oppose donepezil
+MODERATE: Omeprazole raises amitriptyline levels (CYP2C19) - delirium risk
+MODERATE: Oxybutynin frail elderly start dose is 2.5 mg; consider mirabegron
+MILD: Long-term PPI in osteoporosis - fracture risk
+Recommend sertraline instead of amitriptyline","**Interactions**  
+- Amitriptyline + Omeprazole: Increased risk of delirium due to elevated amitriptyline levels.
+
+**Dose checks**  
+- Oxybutynin 5 mg three times daily: This is above the recommended starting dose of 2.5 mg for frail elderly patients.  
+  Severity: Moderate.  
+- Amitriptyline 25 mg at bedtime: This is above the recommended starting dose of 10 mg for elderly patients.  
+  Severity: Moderate.
+
+**Adverse Drug Reactions**  
+- **Oxybutynin**  
+  - Confusion  
+  - Somnolence  
+  - Dry mouth  
+
+- **Amitriptyline**  
+  - Confusion  
+  - Sedation  
+  - Tachycardia  
+
+- **Omeprazole**  
+  - Hip fractures (long-term use)  
+  - C. difficile-associated diarrhea (long-term use)  
+  - Hypomagnesemia (long-term use)  
+
+Overall severity: Moderate - due to multiple moderate dose issues and significant interaction risks in an elderly patient.","Oxybutynin / Monitoring
+Oxybutynin / Adverse Drug Reaction Profile
+Oxybutynin / Interactions
+Oxybutynin / Urgent Signs
+Oxybutynin / Dosing Considerations
+Oxybutynin / Alternatives
+Oxybutynin / Mechanism
+Amitriptyline / Dosing Considerations
+Amitriptyline / Interactions
+Amitriptyline / Adverse Drug Reaction Profile
+Amitriptyline / Urgent Signs
+Amitriptyline / Monitoring
+Amitriptyline / Alternatives
+Amitriptyline / Adverse Drug Reaction Profile
+Omeprazole / Adverse Drug Reaction Profile
+Omeprazole / Monitoring
+Omeprazole / Interactions
+Omeprazole / Alternatives
+Omeprazole / Urgent Signs
+Omeprazole / Dosing Considerations
+Omeprazole / Mechanism",0.8235294117647058,0.9320790320718623,1.0,0.4401854588819864,
+TP14,1251,Check patient 1251 for ADR risks,"MODERATE: Oxybutynin in Parkinson's with constipation - anticholinergic confusion, worse constipation
+MODERATE: Fall risk - Parkinson's + zolpidem + sertraline
+NO DOSE FLAG: Zolpidem 5 mg is the correct elderly dose","**Interactions**  
+- Sertraline and Zolpidem: Sertraline raised zolpidem peak levels by 43%.
+
+**Oxybutynin**  
+- Confusion (Mild)  
+- Somnolence (Mild)  
+- Constipation (Mild)  
+
+**Sertraline**  
+- Hyponatremia/SIADH (Moderate)  
+- Increased bleeding risk (Moderate)  
+- Dizziness (Mild)  
+
+**Zolpidem**  
+- Drowsiness (Mild)  
+- Next-day impairment (Moderate)  
+- Complex sleep behaviors (Moderate)  
+
+**Dose checks**  
+- Oxybutynin 5 mg three times daily: within the usual adult dose range.  
+- Sertraline 50 mg once daily: within the usual starting dose range.  
+- Zolpidem 5 mg at bedtime: appropriate for elderly patients.  
+
+Overall severity: Moderate - the combination of sertraline and zolpidem raises the risk of next-day impairment and increased bleeding, which requires monitoring.","Oxybutynin / Monitoring
+Oxybutynin / Adverse Drug Reaction Profile
+Oxybutynin / Dosing Considerations
+Oxybutynin / Interactions
+Oxybutynin / Urgent Signs
+Oxybutynin / Alternatives
+Oxybutynin / Mechanism
+Sertraline / Adverse Drug Reaction Profile
+Sertraline / Interactions
+Sertraline / Monitoring
+Sertraline / Dosing Considerations
+Sertraline / Urgent Signs
+Sertraline / Mechanism
+Sertraline / Alternatives
+Zolpidem / Adverse Drug Reaction Profile
+Zolpidem / Dosing Considerations
+Zolpidem / Interactions
+Zolpidem / Urgent Signs
+Zolpidem / Monitoring
+Zolpidem / Alternatives
+Zolpidem / Mechanism",0.875,0.7788823911544387,1.0,0.34731552299407636,
+TP05,1151,Check patient 1151 for ADR risks,"SEVERE: Glyburide hypoglycemia risk in elderly with CKD (CrCl about 40) - switch to glipizide
+MODERATE: Ibuprofen increases glyburide's hypoglycemic effect
+MODERATE: Ibuprofen with CKD and lisinopril - kidney injury risk; use acetaminophen","**Interactions**  
+- Glyburide and Ibuprofen: Increased hypoglycemic effect due to ibuprofen.
+
+**Dose checks**  
+- Glyburide 10 mg: Above the usual starting dose (2.5-5 mg) for older adults; Severity: Moderate.  
+- Ibuprofen 600 mg: Not specified in the guideline, confirm with a dosing reference.
+
+**Adverse Drug Reactions**  
+- **Glyburide**  
+  - Hypoglycemia.  
+  - Nausea.  
+  - Allergic skin reactions.  
+
+- **Ibuprofen**  
+  - Gastrointestinal ulceration.  
+  - Kidney impairment.  
+  - Confusion.  
+
+Overall severity: Moderate - Glyburide's dose is above the recommended starting dose for older adults, increasing the risk of hypoglycemia.","Glyburide / Adverse Drug Reaction Profile
+Glyburide / Monitoring
+Glyburide / Dosing Considerations
+Glyburide / Interactions
+Glyburide / Alternatives
+Glyburide / Urgent Signs
+Glyburide / Mechanism
+Ibuprofen / Interactions
+Ibuprofen / Monitoring
+Ibuprofen / Adverse Drug Reaction Profile
+Ibuprofen / Dosing Considerations
+Ibuprofen / Interactions
+Ibuprofen / Urgent Signs
+Ibuprofen / Alternatives",0.625,0.9093537414836079,0.6666666666666666,0.45482112073615705,
+TP12,1233,Check patient 1233 for ADR risks,"NEGATIVE CONTROL: No significant ADR expected
+Optional: reassess omeprazole after 4-8 weeks of therapy","**Interactions**  
+- Omeprazole may increase the levels of diazepam (more sedation).  
+- Omeprazole may increase INR in patients on warfarin.  
+
+**Loratadine**  
+- Headache  
+- Sleepiness  
+- Dry mouth  
+
+**Omeprazole**  
+- Headache  
+- Abdominal pain  
+- Nausea  
+
+**Dose checks**  
+- Loratadine 10 mg: within recommended dose.  
+- Omeprazole 20 mg: within recommended dose.  
+- Amlodipine 5 mg: not in the knowledge base.  
+- Atorvastatin 20 mg: not in the knowledge base.  
+
+Overall severity: Moderate - due to potential interactions with omeprazole and the need for monitoring.","Loratadine / Monitoring
+Loratadine / Adverse Drug Reaction Profile
+Loratadine / Interactions
+Loratadine / Dosing Considerations
+Loratadine / Urgent Signs
+Loratadine / Mechanism
+Loratadine / Alternatives
+Omeprazole / Adverse Drug Reaction Profile
+Omeprazole / Monitoring
+Omeprazole / Alternatives
+Omeprazole / Interactions
+Omeprazole / Urgent Signs
+Omeprazole / Dosing Considerations
+Omeprazole / Mechanism",1.0,0.4740740740582716,1.0,0.3837159632090767,
+TP01,1101,Check patient 1101 for ADR risks,"SEVERE: Bleeding risk - apixaban + ibuprofen + sertraline (anticoagulant + NSAID + SSRI)
+SEVERE: Apixaban dose too high - meets all 3 criteria (age >=80, weight <=60 kg, creatinine >=1.5); should be 2.5 mg twice daily
+MODERATE: Ibuprofen with CKD stage 4 - kidney harm; switch to acetaminophen
+MILD: Sertraline - check sodium (hyponatremia risk in elderly)","**Interactions:**
+- Apixaban and Ibuprofen: Increased bleeding risk due to combined anticoagulant and antiplatelet effects.
+- Apixaban and Sertraline: Increased bleeding risk due to combined anticoagulant and SSRI effects.
+- Ibuprofen and Sertraline: Increased bleeding risk due to combined NSAID and SSRI effects.
+
+**Dose checks:**
+- Apixaban 5 mg twice daily: This dose is above the recommended reduced dose of 2.5 mg twice daily due to the patient's age (84 years), weight (55 kg), and serum creatinine (1.6 mg/dL).  
+  Severity: Severe.
+- Sertraline 50 mg once daily: This dose is acceptable as the usual starting dose is 50 mg, but in older adults, starting at 25 mg is common.  
+  Severity: not enough information.
+- Ibuprofen 400 mg three times daily: This dose is acceptable for short-term use, but long-term use should be monitored closely due to renal and GI risks.  
+  Severity: not enough information.
+- Amlodipine 5 mg once daily: Amlodipine: not in the knowledge base.
+
+**Adverse Drug Reactions:**
+- **Apixaban:**
+  - Bleeding (common risk).
+  - Increased risk of major bleeding (especially with NSAIDs and SSRIs).
+  - Risk of spinal/epidural hematoma with neuraxial anesthesia.
+  
+- **Sertraline:**
+  - Increased bleeding risk (especially with anticoagulants).
+  - Hyponatremia/SIADH (risk in older adults).
+  - Dizziness (common side effect).
+
+- **Ibuprofen:**
+  - Gastrointestinal ulceration (risk increased with concurrent anticoagulants).
+  - Kidney impairment (risk increased in older adults).
+  - Confusion (risk in older adults).
+
+Overall severity: Severe - the combination of apixaban with ibuprofen and sertraline significantly increases the risk of bleeding, and the apixaban dose exceeds the recommended limit for this patient.","Apixaban / Adverse Drug Reaction Profile
+Apixaban / Interactions
+Apixaban / Monitoring
+Apixaban / Urgent Signs
+Apixaban / Alternatives
+Apixaban / Dosing Considerations
+Apixaban / Mechanism
+Sertraline / Adverse Drug Reaction Profile
+Sertraline / Monitoring
+Sertraline / Interactions
+Sertraline / Dosing Considerations
+Sertraline / Urgent Signs
+Sertraline / Alternatives
+Sertraline / Mechanism
+Ibuprofen / Interactions
+Ibuprofen / Adverse Drug Reaction Profile
+Ibuprofen / Monitoring
+Ibuprofen / Dosing Considerations
+Ibuprofen / Interactions
+Ibuprofen / Urgent Signs
+Ibuprofen / Alternatives",0.8275862068965517,0.6851314283953889,1.0,0.45416586836121026,
+TP10,1210,Check patient 1210 for ADR risks,"SEVERE: Serotonin syndrome and seizure risk - tramadol + amitriptyline + cyclobenzaprine
+SEVERE: CNS depression and falls - four CNS-active drugs
+MODERATE: Tramadol 400 mg/day - over 300 mg/day max for age >75 (he is 76)
+MODERATE: Amitriptyline (CYP2D6 inhibitor) changes tramadol activation
+MODERATE: Zolpidem 10 mg above 5 mg elderly dose","**Interactions**  
+- Tramadol and Amitriptyline: Increased risk of serotonin syndrome and lowered seizure threshold.  
+- Tramadol and Zolpidem: Increased risk of sedation and respiratory depression.  
+- Amitriptyline and Cyclobenzaprine: Compounded anticholinergic burden and increased risk of sedation.  
+- Cyclobenzaprine and Zolpidem: Increased risk of sedation and respiratory depression.  
+
+**Dose checks**  
+- Tramadol 100 mg every 6 hours (maximum 300 mg/day for patients over 75): Dose is acceptable.  
+- Amitriptyline 50 mg at bedtime (recommended starting dose for elderly is around 10 mg): Dose is above recommended starting dose. Severity: Moderate.  
+- Cyclobenzaprine 10 mg three times daily: No specific dose check available, but use in elderly is discouraged. Severity: Severe.  
+- Zolpidem 10 mg at bedtime (maximum dose for elderly is 5 mg): Dose is above maximum recommended dose. Severity: Severe.  
+
+**Adverse Drug Reactions**  
+- **Tramadol**:  
+  - Sedation  
+  - Respiratory depression  
+  - Constipation  
+
+- **Amitriptyline**:  
+  - Drowsiness  
+  - Dry mouth  
+  - Cognitive impairment  
+
+- **Cyclobenzaprine**:  
+  - Drowsiness  
+  - Confusion  
+  - Dysphagia  
+
+- **Zolpidem**:  
+  - Drowsiness  
+  - Dizziness  
+  - Complex sleep behaviors  
+
+Overall severity: Severe - multiple medications and doses above recommended levels increase the risk of significant adverse drug reactions in this elderly patient.","Tramadol / Monitoring
+Tramadol / Adverse Drug Reaction Profile
+Tramadol / Interactions
+Tramadol / Urgent Signs
+Tramadol / Dosing Considerations
+Tramadol / Alternatives
+Tramadol / Mechanism
+Amitriptyline / Dosing Considerations
+Amitriptyline / Interactions
+Amitriptyline / Urgent Signs
+Amitriptyline / Adverse Drug Reaction Profile
+Amitriptyline / Monitoring
+Amitriptyline / Alternatives
+Amitriptyline / Adverse Drug Reaction Profile
+Cyclobenzaprine / Monitoring
+Cyclobenzaprine / Adverse Drug Reaction Profile
+Cyclobenzaprine / Interactions
+Cyclobenzaprine / Dosing Considerations
+Cyclobenzaprine / Urgent Signs
+Cyclobenzaprine / Alternatives
+Cyclobenzaprine / Mechanism
+Zolpidem / Adverse Drug Reaction Profile
+Zolpidem / Monitoring
+Zolpidem / Urgent Signs
+Zolpidem / Dosing Considerations
+Zolpidem / Interactions
+Zolpidem / Alternatives
+Zolpidem / Mechanism",1.0,0.7843640360135455,1.0,0.4428437470636069,
