@@ -1,0 +1,718 @@
+{
+  "note": "DRAFT for pharmacist review - merge into test_patients.json only after review",
+  "new_conditions": {
+    "urinary_tract_infection": {
+      "code": "68566005",
+      "display": "Urinary tract infectious disease"
+    }
+  },
+  "patients": [
+    {
+      "test_id": "TP16",
+      "given": "Maria",
+      "family": "Lopez",
+      "gender": "female",
+      "birth_date": "1952-05-14",
+      "weight_kg": 72,
+      "creatinine_mg_dl": 1.0,
+      "conditions": [
+        "type_2_diabetes",
+        "hypertension",
+        "hyperlipidemia"
+      ],
+      "medications": [
+        {
+          "text": "Metformin 1000 mg",
+          "dosage": "1 tablet by mouth twice daily"
+        },
+        {
+          "text": "Lisinopril 20 mg",
+          "dosage": "1 tablet by mouth once daily"
+        },
+        {
+          "text": "Atorvastatin 40 mg",
+          "dosage": "1 tablet by mouth at bedtime"
+        }
+      ],
+      "expected_findings": [
+        "OUT OF SCOPE: Metformin, lisinopril and atorvastatin are all not in the knowledge base - chatbot should say so for each drug and not invent ADRs, interactions or dose checks",
+        "Overall severity: cannot be assessed - not in the knowledge base"
+      ]
+    },
+    {
+      "test_id": "TP17",
+      "given": "Robert",
+      "family": "Kowalski",
+      "gender": "male",
+      "birth_date": "1953-01-09",
+      "weight_kg": 84,
+      "creatinine_mg_dl": 1.0,
+      "conditions": [
+        "atrial_fibrillation",
+        "heart_failure"
+      ],
+      "medications": [
+        {
+          "text": "Apixaban 5 mg",
+          "dosage": "1 tablet by mouth twice daily"
+        },
+        {
+          "text": "Amiodarone 200 mg",
+          "dosage": "1 tablet by mouth once daily"
+        },
+        {
+          "text": "Digoxin 0.125 mg",
+          "dosage": "1 tablet by mouth once daily"
+        }
+      ],
+      "expected_findings": [
+        "NO DOSE FLAG: Apixaban 5 mg is correct - 0 of 3 reduction criteria (age 73, 84 kg, creatinine 1.0)",
+        "OUT OF SCOPE: Amiodarone and digoxin are not in the knowledge base - chatbot should not invent interactions for them",
+        "MILD: Apixaban - monitor for bleeding"
+      ]
+    },
+    {
+      "test_id": "TP18",
+      "given": "James",
+      "family": "Okafor",
+      "gender": "male",
+      "birth_date": "1949-03-22",
+      "weight_kg": 80,
+      "creatinine_mg_dl": 1.1,
+      "conditions": [
+        "coronary_artery_disease",
+        "gerd",
+        "hyperlipidemia"
+      ],
+      "medications": [
+        {
+          "text": "Clopidogrel 75 mg",
+          "dosage": "1 tablet by mouth once daily"
+        },
+        {
+          "text": "Omeprazole 20 mg",
+          "dosage": "1 capsule by mouth once daily"
+        },
+        {
+          "text": "Atorvastatin 40 mg",
+          "dosage": "1 tablet by mouth at bedtime"
+        }
+      ],
+      "expected_findings": [
+        "SEVERE: Omeprazole reduces activation of clopidogrel - should not be combined; if a PPI is needed for GI protection, pantoprazole is preferred",
+        "MILD: Long-term omeprazole - C. difficile, fracture, B12 and magnesium risks; use lowest dose and shortest duration",
+        "OUT OF SCOPE: Atorvastatin is not in the knowledge base"
+      ]
+    },
+    {
+      "test_id": "TP19",
+      "given": "Linda",
+      "family": "Nguyen",
+      "gender": "female",
+      "birth_date": "1954-06-30",
+      "weight_kg": 66,
+      "creatinine_mg_dl": 0.9,
+      "conditions": [
+        "depression",
+        "low_back_pain",
+        "muscle_spasm"
+      ],
+      "medications": [
+        {
+          "text": "Cyclobenzaprine 10 mg",
+          "dosage": "1 tablet by mouth three times daily"
+        },
+        {
+          "text": "Duloxetine 60 mg",
+          "dosage": "1 capsule by mouth once daily"
+        }
+      ],
+      "expected_findings": [
+        "SEVERE: Serotonin syndrome risk - cyclobenzaprine + duloxetine",
+        "SEVERE: Cyclobenzaprine should be avoided in older adults (Beers criteria, NCQA); no proven benefit beyond 2 weeks",
+        "OUT OF SCOPE: Duloxetine itself is not in the knowledge base"
+      ]
+    },
+    {
+      "test_id": "TP20",
+      "given": "Dorothy",
+      "family": "Fischer",
+      "gender": "female",
+      "birth_date": "1941-09-12",
+      "weight_kg": 58,
+      "creatinine_mg_dl": 0.9,
+      "conditions": [
+        "alzheimers",
+        "hypertension"
+      ],
+      "medications": [
+        {
+          "text": "Donepezil 10 mg",
+          "dosage": "1 tablet by mouth at bedtime"
+        },
+        {
+          "text": "Memantine 10 mg",
+          "dosage": "1 tablet by mouth twice daily"
+        },
+        {
+          "text": "Lisinopril 10 mg",
+          "dosage": "1 tablet by mouth once daily"
+        }
+      ],
+      "expected_findings": [
+        "OUT OF SCOPE: Donepezil, memantine and lisinopril are all not in the knowledge base - chatbot should say so and not invent ADRs or interactions",
+        "Overall severity: cannot be assessed - not in the knowledge base"
+      ]
+    },
+    {
+      "test_id": "TP21",
+      "given": "Barbara",
+      "family": "Hughes",
+      "gender": "female",
+      "birth_date": "1948-02-03",
+      "weight_kg": 60,
+      "creatinine_mg_dl": 0.8,
+      "conditions": [
+        "insomnia"
+      ],
+      "medications": [
+        {
+          "text": "Zolpidem 10 mg",
+          "dosage": "1 tablet by mouth at bedtime"
+        }
+      ],
+      "expected_findings": [
+        "MODERATE: Zolpidem 10 mg is above the 5 mg dose for elderly patients (and 5 mg is the FDA starting dose for women)",
+        "MILD: Complex sleep behaviors and next-day impairment - counsel patient"
+      ]
+    },
+    {
+      "test_id": "TP22",
+      "given": "Harold",
+      "family": "Bennett",
+      "gender": "male",
+      "birth_date": "1945-07-19",
+      "weight_kg": 70,
+      "creatinine_mg_dl": 1.0,
+      "conditions": [
+        "allergic_rhinitis",
+        "insomnia"
+      ],
+      "medications": [
+        {
+          "text": "Diphenhydramine 50 mg",
+          "dosage": "1 capsule by mouth at bedtime for allergies and sleep"
+        }
+      ],
+      "expected_findings": [
+        "MODERATE: Diphenhydramine should generally be avoided in older adults - strong anticholinergic effects, confusion, falls, next-day sedation; switch to loratadine 10 mg once daily for allergies"
+      ]
+    },
+    {
+      "test_id": "TP23",
+      "given": "Susan",
+      "family": "Patel",
+      "gender": "female",
+      "birth_date": "1956-04-08",
+      "weight_kg": 64,
+      "creatinine_mg_dl": 0.8,
+      "conditions": [
+        "depression"
+      ],
+      "medications": [
+        {
+          "text": "Sertraline 25 mg",
+          "dosage": "1 tablet by mouth once daily"
+        }
+      ],
+      "expected_findings": [
+        "NO DOSE FLAG: Sertraline 25 mg once daily is the common starting dose in older adults - chatbot should NOT flag the dose",
+        "MILD: Check sodium (hyponatremia risk in older adults)"
+      ]
+    },
+    {
+      "test_id": "TP24",
+      "given": "Walter",
+      "family": "Schmidt",
+      "gender": "male",
+      "birth_date": "1947-11-25",
+      "weight_kg": 74,
+      "creatinine_mg_dl": 1.0,
+      "conditions": [
+        "anxiety",
+        "insomnia"
+      ],
+      "medications": [
+        {
+          "text": "Diazepam 10 mg",
+          "dosage": "1 tablet by mouth three times daily"
+        }
+      ],
+      "expected_findings": [
+        "SEVERE: Diazepam is a long-acting benzodiazepine not recommended in older adults - falls, sedation, confusion",
+        "MODERATE: Diazepam 30 mg/day - elderly dose should be about half of the adult dose, and treatment limited to 2 weeks"
+      ]
+    },
+    {
+      "test_id": "TP25",
+      "given": "Carol",
+      "family": "Whitfield",
+      "gender": "female",
+      "birth_date": "1950-08-16",
+      "weight_kg": 62,
+      "creatinine_mg_dl": 0.8,
+      "conditions": [
+        "allergic_rhinitis"
+      ],
+      "medications": [
+        {
+          "text": "Loratadine 10 mg",
+          "dosage": "1 tablet by mouth once daily"
+        }
+      ],
+      "expected_findings": [
+        "NEGATIVE CONTROL: No significant ADR expected - loratadine 10 mg once daily is the correct dose",
+        "Overall severity: Mild"
+      ]
+    },
+    {
+      "test_id": "TP26",
+      "given": "George",
+      "family": "Ramirez",
+      "gender": "male",
+      "birth_date": "1949-12-01",
+      "weight_kg": 78,
+      "creatinine_mg_dl": 1.0,
+      "conditions": [
+        "coronary_artery_disease",
+        "hypertension"
+      ],
+      "medications": [
+        {
+          "text": "Aspirin 325 mg",
+          "dosage": "1 tablet by mouth once daily for heart protection"
+        }
+      ],
+      "expected_findings": [
+        "MODERATE: Aspirin 325 mg for cardioprotection - higher doses do not improve antiplatelet effect and increase bleeding; standard dose is 81 mg once daily",
+        "MILD: GI bleeding risk in older adults - monitor"
+      ]
+    },
+    {
+      "test_id": "TP27",
+      "given": "Joan",
+      "family": "Mitchell",
+      "gender": "female",
+      "birth_date": "1947-05-05",
+      "weight_kg": 60,
+      "creatinine_mg_dl": 1.3,
+      "conditions": [
+        "postherpetic_neuralgia",
+        "ckd_stage_3"
+      ],
+      "medications": [
+        {
+          "text": "Gabapentin 300 mg",
+          "dosage": "1 capsule by mouth three times daily"
+        }
+      ],
+      "expected_findings": [
+        "NO DOSE FLAG: Gabapentin 900 mg/day is within the 400-1400 mg/day range for CrCl about 33 mL/min - chatbot should NOT flag the total dose",
+        "MILD: At this CrCl the label splits the dose twice daily",
+        "MILD: Dizziness, sedation and fall risk in older adults"
+      ]
+    },
+    {
+      "test_id": "TP28",
+      "given": "Frank",
+      "family": "Delgado",
+      "gender": "male",
+      "birth_date": "1942-02-14",
+      "weight_kg": 62,
+      "creatinine_mg_dl": 3.6,
+      "conditions": [
+        "postherpetic_neuralgia",
+        "ckd_stage_4",
+        "hypertension"
+      ],
+      "medications": [
+        {
+          "text": "Gabapentin 300 mg",
+          "dosage": "1 capsule by mouth three times daily"
+        }
+      ],
+      "expected_findings": [
+        "SEVERE: Gabapentin 900 mg/day with CrCl about 13 mL/min - label range is 100-300 mg/day once daily for CrCl below 15",
+        "MODERATE: Sedation, dizziness and fall risk increased by drug accumulation"
+      ]
+    },
+    {
+      "test_id": "TP29",
+      "given": "Edna",
+      "family": "Larsen",
+      "gender": "female",
+      "birth_date": "1944-10-10",
+      "weight_kg": 50,
+      "creatinine_mg_dl": 1.5,
+      "conditions": [
+        "osteoarthritis",
+        "ckd_stage_4",
+        "hypertension"
+      ],
+      "medications": [
+        {
+          "text": "Tramadol 50 mg",
+          "dosage": "1 tablet by mouth every 6 hours"
+        }
+      ],
+      "expected_findings": [
+        "MODERATE: Tramadol every 6 hours with CrCl about 23 mL/min - below 30 the interval should be every 12 hours, max 200 mg/day",
+        "MODERATE: CNS depression, falls and seizure risk in an 82-year-old"
+      ]
+    },
+    {
+      "test_id": "TP30",
+      "given": "Margaret",
+      "family": "O'Brien",
+      "gender": "female",
+      "birth_date": "1944-03-03",
+      "weight_kg": 58,
+      "creatinine_mg_dl": 1.1,
+      "conditions": [
+        "atrial_fibrillation",
+        "hypertension",
+        "ckd_stage_3"
+      ],
+      "medications": [
+        {
+          "text": "Apixaban 5 mg",
+          "dosage": "1 tablet by mouth twice daily"
+        }
+      ],
+      "expected_findings": [
+        "SEVERE: Apixaban dose too high - meets 2 of 3 criteria (age 82, weight 58 kg); should be 2.5 mg twice daily",
+        "MILD: Monitor for bleeding and kidney function"
+      ]
+    },
+    {
+      "test_id": "TP31",
+      "given": "Daniel",
+      "family": "Kim",
+      "gender": "male",
+      "birth_date": "1956-01-20",
+      "weight_kg": 76,
+      "creatinine_mg_dl": 1.0,
+      "conditions": [
+        "atrial_fibrillation",
+        "hypertension"
+      ],
+      "medications": [
+        {
+          "text": "Apixaban 2.5 mg",
+          "dosage": "1 tablet by mouth twice daily"
+        }
+      ],
+      "expected_findings": [
+        "MODERATE: Apixaban 2.5 mg is below the standard 5 mg twice daily - patient meets 0 of 3 reduction criteria (age 70, 76 kg, creatinine 1.0); underdosing raises stroke risk",
+        "MILD: Monitor for bleeding"
+      ]
+    },
+    {
+      "test_id": "TP32",
+      "given": "Evelyn",
+      "family": "Brooks",
+      "gender": "female",
+      "birth_date": "1941-06-06",
+      "weight_kg": 54,
+      "creatinine_mg_dl": 1.0,
+      "conditions": [
+        "alzheimers",
+        "urge_incontinence",
+        "allergic_rhinitis",
+        "insomnia"
+      ],
+      "medications": [
+        {
+          "text": "Donepezil 10 mg",
+          "dosage": "1 tablet by mouth at bedtime"
+        },
+        {
+          "text": "Oxybutynin 5 mg",
+          "dosage": "1 tablet by mouth three times daily"
+        },
+        {
+          "text": "Diphenhydramine 25 mg",
+          "dosage": "1 capsule by mouth at bedtime for sleep"
+        }
+      ],
+      "expected_findings": [
+        "SEVERE: Anticholinergic burden in dementia - oxybutynin + diphenhydramine; oxybutynin works against donepezil",
+        "MODERATE: Oxybutynin 5 mg three times daily - frail elderly starting dose is 2.5 mg two or three times daily",
+        "MODERATE: Diphenhydramine should generally be avoided in older adults - switch to loratadine if for allergies",
+        "OUT OF SCOPE: Donepezil is not in the knowledge base"
+      ]
+    },
+    {
+      "test_id": "TP33",
+      "given": "Thomas",
+      "family": "Reilly",
+      "gender": "male",
+      "birth_date": "1947-09-09",
+      "weight_kg": 76,
+      "creatinine_mg_dl": 1.2,
+      "conditions": [
+        "atrial_fibrillation",
+        "coronary_artery_disease",
+        "depression",
+        "gerd"
+      ],
+      "medications": [
+        {
+          "text": "Warfarin 5 mg",
+          "dosage": "1 tablet by mouth once daily, adjust to INR"
+        },
+        {
+          "text": "Aspirin 81 mg",
+          "dosage": "1 tablet by mouth once daily"
+        },
+        {
+          "text": "Sertraline 50 mg",
+          "dosage": "1 tablet by mouth once daily"
+        },
+        {
+          "text": "Omeprazole 20 mg",
+          "dosage": "1 capsule by mouth once daily"
+        }
+      ],
+      "expected_findings": [
+        "SEVERE: Major bleeding risk - warfarin + aspirin + sertraline",
+        "MODERATE: Omeprazole can raise INR on warfarin - monitor INR",
+        "MODERATE: Sertraline raises INR on warfarin - monitor INR"
+      ]
+    },
+    {
+      "test_id": "TP34",
+      "given": "Gloria",
+      "family": "Martinez",
+      "gender": "female",
+      "birth_date": "1943-04-28",
+      "weight_kg": 57,
+      "creatinine_mg_dl": 1.4,
+      "conditions": [
+        "type_2_diabetes",
+        "ckd_stage_4",
+        "dvt_history"
+      ],
+      "medications": [
+        {
+          "text": "Glyburide 10 mg",
+          "dosage": "1 tablet by mouth once daily with breakfast"
+        },
+        {
+          "text": "Warfarin 4 mg",
+          "dosage": "1 tablet by mouth once daily, adjust to INR"
+        }
+      ],
+      "expected_findings": [
+        "SEVERE: Glyburide hypoglycemia risk in an 83-year-old with CrCl about 27 - switch to glipizide",
+        "MODERATE: Warfarin increases glyburide's hypoglycemic effect"
+      ]
+    },
+    {
+      "test_id": "TP35",
+      "given": "Richard",
+      "family": "Lindqvist",
+      "gender": "male",
+      "birth_date": "1946-08-08",
+      "weight_kg": 68,
+      "creatinine_mg_dl": 1.1,
+      "conditions": [
+        "osteoarthritis",
+        "low_back_pain",
+        "insomnia",
+        "anxiety",
+        "postherpetic_neuralgia"
+      ],
+      "medications": [
+        {
+          "text": "Tramadol 50 mg",
+          "dosage": "1 tablet by mouth every 6 hours"
+        },
+        {
+          "text": "Gabapentin 300 mg",
+          "dosage": "1 capsule by mouth three times daily"
+        },
+        {
+          "text": "Zolpidem 5 mg",
+          "dosage": "1 tablet by mouth at bedtime"
+        },
+        {
+          "text": "Diazepam 2 mg",
+          "dosage": "1 tablet by mouth twice daily"
+        }
+      ],
+      "expected_findings": [
+        "SEVERE: CNS and respiratory depression and fall risk - tramadol + gabapentin + zolpidem + diazepam (four CNS depressants)",
+        "MODERATE: Diazepam is a long-acting benzodiazepine not recommended in older adults",
+        "NO DOSE FLAG: Tramadol 200 mg/day (under 300 mg/day for age over 75), gabapentin 900 mg/day (within 400-1400 for CrCl about 52) and zolpidem 5 mg (elderly dose) are within limits"
+      ]
+    },
+    {
+      "test_id": "TP36",
+      "given": "Helen",
+      "family": "Novak",
+      "gender": "female",
+      "birth_date": "1949-11-11",
+      "weight_kg": 61,
+      "creatinine_mg_dl": 0.9,
+      "conditions": [
+        "depression",
+        "gerd",
+        "muscle_spasm",
+        "low_back_pain",
+        "insomnia"
+      ],
+      "medications": [
+        {
+          "text": "Amitriptyline 25 mg",
+          "dosage": "1 tablet by mouth at bedtime"
+        },
+        {
+          "text": "Omeprazole 40 mg",
+          "dosage": "1 capsule by mouth once daily"
+        },
+        {
+          "text": "Cyclobenzaprine 10 mg",
+          "dosage": "1 tablet by mouth three times daily"
+        },
+        {
+          "text": "Tramadol 50 mg",
+          "dosage": "1 tablet by mouth twice daily as needed"
+        }
+      ],
+      "expected_findings": [
+        "SEVERE: Serotonin syndrome and seizure risk - tramadol + amitriptyline (amitriptyline also inhibits CYP2D6 activation of tramadol)",
+        "SEVERE: Cyclobenzaprine should be avoided in older adults; adds anticholinergic burden with amitriptyline",
+        "MODERATE: Omeprazole (CYP2C19) raises amitriptyline levels - delirium risk",
+        "MILD: Amitriptyline 25 mg is above the 10 mg/day elderly starting dose"
+      ]
+    },
+    {
+      "test_id": "TP37",
+      "given": "William",
+      "family": "Foster",
+      "gender": "male",
+      "birth_date": "1950-02-02",
+      "weight_kg": 80,
+      "creatinine_mg_dl": 1.0,
+      "conditions": [
+        "atrial_fibrillation",
+        "coronary_artery_disease",
+        "hypertension"
+      ],
+      "medications": [
+        {
+          "text": "Apixaban 5 mg",
+          "dosage": "1 tablet by mouth twice daily"
+        },
+        {
+          "text": "Aspirin 81 mg",
+          "dosage": "1 tablet by mouth once daily"
+        },
+        {
+          "text": "Clopidogrel 75 mg",
+          "dosage": "1 tablet by mouth once daily"
+        }
+      ],
+      "expected_findings": [
+        "SEVERE: Major bleeding risk - apixaban + aspirin + clopidogrel (anticoagulant + two antiplatelets)",
+        "NO DOSE FLAG: Apixaban 5 mg is correct - 0 of 3 reduction criteria (age 76, 80 kg, creatinine 1.0)",
+        "OUT OF SCOPE: Clopidogrel itself is not in the knowledge base"
+      ]
+    },
+    {
+      "test_id": "TP38",
+      "given": "Patricia",
+      "family": "Huang",
+      "gender": "female",
+      "birth_date": "1950-07-07",
+      "weight_kg": 64,
+      "creatinine_mg_dl": 1.0,
+      "conditions": [
+        "atrial_fibrillation",
+        "hypertension",
+        "urinary_tract_infection"
+      ],
+      "medications": [
+        {
+          "text": "Warfarin 5 mg",
+          "dosage": "1 tablet by mouth once daily, adjust to INR"
+        },
+        {
+          "text": "Metronidazole 500 mg",
+          "dosage": "1 tablet by mouth three times daily for 7 days"
+        }
+      ],
+      "expected_findings": [
+        "SEVERE: Metronidazole increases INR on warfarin - major bleeding risk; check INR within a few days and consider warfarin dose reduction",
+        "OUT OF SCOPE: Metronidazole itself is not in the knowledge base"
+      ]
+    },
+    {
+      "test_id": "TP39",
+      "given": "Ruth",
+      "family": "Andersen",
+      "gender": "female",
+      "birth_date": "1940-01-15",
+      "weight_kg": 52,
+      "creatinine_mg_dl": 0.8,
+      "conditions": [
+        "depression",
+        "hypertension",
+        "osteoporosis"
+      ],
+      "medications": [
+        {
+          "text": "Sertraline 100 mg",
+          "dosage": "1 tablet by mouth once daily"
+        },
+        {
+          "text": "Hydrochlorothiazide 25 mg",
+          "dosage": "1 tablet by mouth once daily"
+        }
+      ],
+      "expected_findings": [
+        "MODERATE: Hyponatremia risk - sertraline + diuretic in an 86-year-old; check sodium, especially if confusion develops",
+        "NO DOSE FLAG: Sertraline 100 mg is within the 200 mg/day maximum",
+        "OUT OF SCOPE: Hydrochlorothiazide itself is not in the knowledge base"
+      ]
+    },
+    {
+      "test_id": "TP40",
+      "given": "Marcus",
+      "family": "Johnson",
+      "gender": "male",
+      "birth_date": "1981-05-05",
+      "weight_kg": 82,
+      "creatinine_mg_dl": 1.0,
+      "conditions": [
+        "depression",
+        "low_back_pain"
+      ],
+      "medications": [
+        {
+          "text": "Tramadol 50 mg",
+          "dosage": "1 tablet by mouth every 6 hours as needed"
+        },
+        {
+          "text": "Sertraline 100 mg",
+          "dosage": "1 tablet by mouth once daily"
+        }
+      ],
+      "expected_findings": [
+        "AGE CONTROL: Patient is 45 - geriatric criteria do not apply; chatbot should say so",
+        "SEVERE: Serotonin syndrome and seizure risk - tramadol + sertraline (general interaction still applies)"
+      ]
+    }
+  ]
+}
