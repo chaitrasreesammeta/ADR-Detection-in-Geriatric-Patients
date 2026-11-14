@@ -12,5 +12,3 @@ Dataset: `datasets/adr_test_dataset.csv`, 40 synthetic test patients (TP01-TP40)
 
 - Before: `experiments/ragas-gpt-4o-2026-11-14-0-58.csv`
 - After: `experiments/ragas-gpt-4o-2026-11-14-11-59.csv`
-- Averages are over 38 patients. TP16 and TP20 take only drugs outside the
-  knowledge base, so nothing is retrieved and RAGAS cannot score them.
